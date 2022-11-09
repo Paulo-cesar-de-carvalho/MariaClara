@@ -1,0 +1,19 @@
+#questionario>p{
+    background-color: aqua;
+    height: 100px;
+    border-radius: 10px;
+    padding-top: 50px;
+    margin: 15px auto;
+    box-shadow: 2px 2px 2px black;
+
+}
+#questionario>p>label{
+    display: inline-block;
+    width: 100px;
+
+}
+
+#questionario>p>select{
+    text-align: center;
+    width: 50px;
+}
