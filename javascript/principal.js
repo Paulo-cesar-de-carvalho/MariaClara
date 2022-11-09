@@ -18,6 +18,15 @@ function criar_questão(item, base){
     base.appendChild(paragrafo)
 }
 
-let divBase = document.querySelector("#questionario")
+function criar_questionario(indiceProfissional){
+    let divBase = document.querySelector("#questionario")
+    divBase.innerText = ""
+    for (indicePergunta of profissionais[indiceProfissional]){
+        criar_questão(`${indicePergunta} - ${questoes[indicePergunta-1]}: `,divBase)
+    }
+}
 
-criar_questão("teste",divBase )
+categoria.addEventListener("change", function(){
+    criar_questionario(this.selectedIndex)
+})
+
