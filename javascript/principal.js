@@ -29,4 +29,4 @@ function criar_questionario(indiceProfissional){
 categoria.addEventListener("change", function(){
     criar_questionario(this.selectedIndex)
 })
-
+criar_questionario(0)
