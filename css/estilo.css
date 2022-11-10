@@ -69,17 +69,38 @@ h1{
 
 @media screen and (min-width: 830px) {
     body{
-        background-color: lightgray;
-        max-width: 900px;
+        
+        max-width: 880px;
+        
 
+    }
+    #cabecalho-questionario>p>input, select{
+      
+        height: 38px;
+        margin: 13px 13px;
+        font-size: 25px;
+      
+    
     }
     #questionario{
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
+        justify-content: space-around;
+        gap: 15px;
+    }
+    #questionario>p{
+        margin: 0px;
+        width: 360px;
     }
     #cabecalho-questionario>p>input, select{
         max-width: 500px;
+    }
+    .botoes{
+        margin-top: 25px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
     }
     
 }
