@@ -1,10 +1,10 @@
-function criar_questão(item, base){
+function criar_questão(item, base,numero){
     let selectQuestao = document.createElement("select")
     selectQuestao.setAttribute ("name", item)
     selectQuestao.setAttribute ("id", item)
     selectQuestao.setAttribute("required", true)
     let paragrafo = document.createElement("p")
-    paragrafo.innerHTML = `<label for=${item}>${item}</label>`
+    paragrafo.innerHTML = `<label for=${item}>${numero} - ${item}: </label>`
     paragrafo.appendChild(selectQuestao)
     let opcao = document.createElement("option")
     opcao.innerText = ""
@@ -22,7 +22,7 @@ function criar_questionario(indiceProfissional){
     let divBase = document.querySelector("#questionario")
     divBase.innerText = ""
     for (indicePergunta of profissionais[indiceProfissional]){
-        criar_questão(`${indicePergunta} - ${questoes[indicePergunta-1]}: `,divBase)
+        criar_questão(questoes[indicePergunta-1],divBase,indicePergunta)
     }
 }
 
